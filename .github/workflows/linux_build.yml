@@ -14,15 +14,3 @@ jobs:
 
       - name: Build & install driver
         run: sudo sh install-driver.sh NoPrompt
-
-  build-fedora:
-    runs-on: fedora-latest
-    steps:
-      - name: Get source code
-        uses: actions/checkout@v3
-
-      - name: Install dependencies
-        run: sudo dnf -y install git dkms kernel-devel
-
-      - name: Build & install driver
-        run: sudo sh install-driver.sh NoPrompt
